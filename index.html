@@ -3,26 +3,104 @@
   <head>
     <title>Real-Madrid Survey form</title>
     <meta charset="UTF-8" />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 id="title">Real Madrid Survey Form</h1>
-    <p id="description">
-      Thank you for taking your time to fill this football survey form.
-    </p>
+    <header>
+      <h1 id="title">Real Madrid Survey Form</h1>
+      <p id="description">
+        Thank you for taking your time to fill this football survey form.
+      </p>
+    </header>
+
     <form id="survey-form">
-      <label for="name"
-        >Name : <input id="name" type="text" placeholder="Enter your Name" />
+      <fieldset>
+        <label id="name-label" for="name"
+          >Name :
+          <input
+            class="twist"
+            id="name"
+            type="text"
+            required
+            placeholder="Enter your Name"
+          />
+        </label>
+
+        <label id="email-label" for="email"
+          >Email :
+          <input
+            class="twist"
+            id="email"
+            type="email"
+            required
+            placeholder="Enter your Email"
+        /></label>
+
+        <label id="number-label" for="age"
+          >Age :
+          <input
+            class="twist"
+            id="number"
+            type="number"
+            min="13"
+            max="90"
+            placeholder="age"
+        /></label>
+
+        <label
+          >Which is your favorite Real Madrid combo?
+          <select id="dropdown">
+            <option value="">select one</option>
+            <option value="1">Benzema and Vinicius</option>
+            <option value="2">Modric, Kroos, Casemiro</option>
+            <option value="3">Ramos and Pepe</option>
+            <option value="4">Ramos and Varane</option>
+            <option value="5">Bale Benzema Ronaldo</option>
+          </select></label
+        >
+      </fieldset>
+
+      <p class="champ-year">
+        Which champions league win did you enjoy the most?
+      </p>
+      <label
+        ><input class="unset" type="radio" name="year" value="2016" />2016
+      </label>
+      <label
+        ><input class="unset" type="radio" name="year" value="2017" />2017
+      </label>
+      <label
+        ><input
+          class="unset"
+          type="radio"
+          name="year"
+          value="2018"
+        />2018</label
+      >
+
+      <p class="check">Which area would you like Real Madrid to Improve ?</p>
+      <label>
+        <input type="checkbox" class="unset" name="attack" value="attack" />
+        Attack
+      </label>
+      <label>
+        <input type="checkbox" class="unset" name="defence" value="defence" />
+        Defence
+      </label>
+      <label>
+        <input type="checkbox" class="unset" name="midfield" value="midfield" />
+        Midfield
       </label>
 
-      <label for="email"
-        >Email : <input id="email" type="email" placeholder="Enter your Email"
-      /></label>
+      <p class="add-comments">AddComments</p>
+      <textarea
+        name="comments"
+        rows="3"
+        cols="30"
+        placeholder="Additional Comments..."
+      ></textarea>
 
-      <label for="age"
-        >Age :
-        <input id="number" type="number" min="13" max="90" placeholder="age"
-      /></label>
+      <input id="submit" type="submit" value="Submit" />
     </form>
   </body>
 </html>
